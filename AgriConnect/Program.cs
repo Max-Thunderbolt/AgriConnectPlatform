@@ -2,6 +2,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<Supabase.Client>(sp => 
+new Supabase.Client(
+builder.Configuration["Supabase:Url"],
+builder.Configuration["Supabase:Key"]
+));
 
 var app = builder.Build();
 

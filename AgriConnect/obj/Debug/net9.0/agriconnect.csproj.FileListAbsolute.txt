@@ -17,7 +17,6 @@ C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\P
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\scopedcss\bundle\agriconnect.styles.css
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\scopedcss\projectbundle\agriconnect.bundle.scp.css
-C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\compressed\gmbqelhd6l-b9sayid5wm.gz
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\compressed\vnnvkk7bxx-61n19gt1b8.gz
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\compressed\uquym3tpkw-xtxxf3hu2r.gz
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\compressed\qlwtv7pr16-bqjiyaj88i.gz
@@ -95,3 +94,17 @@ C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\P
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\agriconnect.pdb
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\agriconnect.genruntimeconfig.cache
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\ref\agriconnect.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\agriconnect.sourcelink.json
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\agriconnect.csproj.AssemblyReference.cache
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\compressed\gmbqelhd6l-e9mnqkq859.gz
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnect\obj\Debug\net9.0\agriconn.10322559.Up2Date
