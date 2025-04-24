@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using AgriConnect.Models;
-using AgriConnect.Utils;
 using System.Text.Json;
 
 namespace AgriConnect.Controllers

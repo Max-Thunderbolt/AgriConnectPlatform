@@ -1,17 +1,17 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Supabase;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
-    });
+builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<Supabase.Client>(sp => 
-new Supabase.Client(
-builder.Configuration["Supabase:Url"],
-builder.Configuration["Supabase:Key"]
-));
+// Configure Supabase
+var supabaseUrl = builder.Configuration["Supabase:Url"];
+var supabaseKey = builder.Configuration["Supabase:Key"];
+builder.Services.AddSingleton<Client>(new Client(supabaseUrl, supabaseKey));
 
 var app = builder.Build();
 

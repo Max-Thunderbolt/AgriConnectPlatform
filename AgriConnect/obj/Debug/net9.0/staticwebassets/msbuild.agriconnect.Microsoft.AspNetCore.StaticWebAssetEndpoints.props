@@ -15,14 +15,14 @@
     <StaticWebAssetEndpoint Include="_content/agriconnect/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2701"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:34:31 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Fl5iM15\u002BhdqAV9PCEmCsvY/3lXriS/siDXd/woAMr9E="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2697"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Fl5iM15\u002BhdqAV9PCEmCsvY/3lXriS/siDXd/woAMr9E=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:59:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/agriconnect/css/site.l0x2tmmyr4.css">
+    <StaticWebAssetEndpoint Include="_content/agriconnect/css/site.iylz06bby4.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l0x2tmmyr4"},{"Name":"integrity","Value":"sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="},{"Name":"label","Value":"_content/agriconnect/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2701"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:34:31 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iylz06bby4"},{"Name":"integrity","Value":"sha256-Fl5iM15\u002BhdqAV9PCEmCsvY/3lXriS/siDXd/woAMr9E="},{"Name":"label","Value":"_content/agriconnect/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2697"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Fl5iM15\u002BhdqAV9PCEmCsvY/3lXriS/siDXd/woAMr9E=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:59:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/agriconnect/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -36,17 +36,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 10:05:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/agriconnect/js/modal.68xsugoiyp.js">
+    <StaticWebAssetEndpoint Include="_content/agriconnect/js/modal.gt0dpmoc8f.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\modal.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"68xsugoiyp"},{"Name":"integrity","Value":"sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="},{"Name":"label","Value":"_content/agriconnect/js/modal.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7595"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:37:51 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gt0dpmoc8f"},{"Name":"integrity","Value":"sha256-ZJbM/berrtFFAQUuoMI/dltpGA26jdelmiUvCeclQ7I="},{"Name":"label","Value":"_content/agriconnect/js/modal.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10479"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ZJbM/berrtFFAQUuoMI/dltpGA26jdelmiUvCeclQ7I=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 12:02:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/agriconnect/js/modal.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\modal.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7595"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 11:37:51 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZJbM/berrtFFAQUuoMI/dltpGA26jdelmiUvCeclQ7I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10479"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ZJbM/berrtFFAQUuoMI/dltpGA26jdelmiUvCeclQ7I=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 12:02:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/agriconnect/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
