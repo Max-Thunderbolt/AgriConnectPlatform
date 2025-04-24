@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k3sVR8h9iactVYhte8d1YeRxBkZ2CXCWoTLd80uTsus=",
+  "Hash": "z+ntF3bGkuJVSR4bmkenDd0rHnZ9CrNMub9SMCpQ600=",
   "Source": "agriconnect",
   "BasePath": "_content/agriconnect",
   "Mode": "Default",
@@ -563,12 +563,33 @@
       "OriginalItemSpec": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-e9mnqkq859.gz",
+      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\ff1ccpevau-68xsugoiyp.gz",
       "SourceId": "agriconnect",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/agriconnect",
-      "RelativePath": "css/site#[.{fingerprint=e9mnqkq859}]?.css.gz",
+      "RelativePath": "js/modal#[.{fingerprint=68xsugoiyp}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\modal.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5zalu5ogox",
+      "Integrity": "0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\modal.js"
+    },
+    {
+      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-l0x2tmmyr4.gz",
+      "SourceId": "agriconnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/agriconnect",
+      "RelativePath": "css/site#[.{fingerprint=l0x2tmmyr4}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -577,8 +598,8 @@
       "RelatedAsset": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "c59geehc26",
-      "Integrity": "UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ=",
+      "Fingerprint": "vu1iof3fh8",
+      "Integrity": "531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\css\\site.css"
@@ -1417,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e9mnqkq859",
-      "Integrity": "jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg=",
+      "Fingerprint": "l0x2tmmyr4",
+      "Integrity": "W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1443,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\modal.js",
+      "SourceId": "agriconnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\",
+      "BasePath": "_content/agriconnect",
+      "RelativePath": "js/modal#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "68xsugoiyp",
+      "Integrity": "NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\modal.js"
     },
     {
       "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\site.js",
@@ -3325,12 +3367,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-e9mnqkq859.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-l0x2tmmyr4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002178649237"
+          "Quality": "0.001123595506"
         }
       ],
       "ResponseHeaders": [
@@ -3340,15 +3382,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "458"
+          "Value": "889"
         },
         {
           "Name": "ETag",
-          "Value": "\"UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ=\""
+          "Value": "\"531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3368,13 +3410,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg=\""
+          "Value": "W/\"W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg="
+          "Value": "sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="
         }
       ]
     },
@@ -3389,7 +3431,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "967"
+          "Value": "2701"
         },
         {
           "Name": "Content-Type",
@@ -3397,11 +3439,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg=\""
+          "Value": "\"W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3411,13 +3453,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg="
+          "Value": "sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-e9mnqkq859.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-l0x2tmmyr4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3426,7 +3468,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "458"
+          "Value": "889"
         },
         {
           "Name": "Content-Type",
@@ -3434,11 +3476,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ=\""
+          "Value": "\"531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3456,18 +3498,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ="
+          "Value": "sha256-531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY="
         }
       ]
     },
     {
-      "Route": "css/site.e9mnqkq859.css",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-e9mnqkq859.gz",
+      "Route": "css/site.l0x2tmmyr4.css",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-l0x2tmmyr4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002178649237"
+          "Quality": "0.001123595506"
         }
       ],
       "ResponseHeaders": [
@@ -3477,15 +3519,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "458"
+          "Value": "889"
         },
         {
           "Name": "ETag",
-          "Value": "\"UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ=\""
+          "Value": "\"531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3505,13 +3547,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg=\""
+          "Value": "W/\"W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e9mnqkq859"
+          "Value": "l0x2tmmyr4"
         },
         {
           "Name": "label",
@@ -3519,12 +3561,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg="
+          "Value": "sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="
         }
       ]
     },
     {
-      "Route": "css/site.e9mnqkq859.css",
+      "Route": "css/site.l0x2tmmyr4.css",
       "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3534,7 +3576,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "967"
+          "Value": "2701"
         },
         {
           "Name": "Content-Type",
@@ -3542,11 +3584,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg=\""
+          "Value": "\"W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3556,7 +3598,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e9mnqkq859"
+          "Value": "l0x2tmmyr4"
         },
         {
           "Name": "label",
@@ -3564,13 +3606,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jmXdZ5uacXCbwBfG86VNTcxEoVJp+5PB8AfIIC3wSbg="
+          "Value": "sha256-W7dh999RLevmuCRk4O4dN0tRBb9PrOUX49E0EfwL8Ao="
         }
       ]
     },
     {
-      "Route": "css/site.e9mnqkq859.css.gz",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-e9mnqkq859.gz",
+      "Route": "css/site.l0x2tmmyr4.css.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\gmbqelhd6l-l0x2tmmyr4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3579,7 +3621,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "458"
+          "Value": "889"
         },
         {
           "Name": "Content-Type",
@@ -3587,11 +3629,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ=\""
+          "Value": "\"531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 10:24:26 GMT"
+          "Value": "Thu, 24 Apr 2025 11:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3609,7 +3651,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e9mnqkq859"
+          "Value": "l0x2tmmyr4"
         },
         {
           "Name": "label",
@@ -3617,7 +3659,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UGgcBArHnoF6myK3Phl7OTrNoPCNmcenpMdUmETmlDQ="
+          "Value": "sha256-531XCKoFFNAvur69y2Srmuay64FH42YKstfHNeQWZtY="
         }
       ]
     },
@@ -3916,6 +3958,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.68xsugoiyp.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\ff1ccpevau-68xsugoiyp.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000725689405"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68xsugoiyp"
+        },
+        {
+          "Name": "label",
+          "Value": "js/modal.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.68xsugoiyp.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\modal.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7595"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68xsugoiyp"
+        },
+        {
+          "Name": "label",
+          "Value": "js/modal.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.68xsugoiyp.js.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\ff1ccpevau-68xsugoiyp.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68xsugoiyp"
+        },
+        {
+          "Name": "label",
+          "Value": "js/modal.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\ff1ccpevau-68xsugoiyp.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000725689405"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\wwwroot\\js\\modal.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7595"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrVvLlwALe1BSsZt0AJM9EKS58rcU2X3TGeCDzrrJCY="
+        }
+      ]
+    },
+    {
+      "Route": "js/modal.js.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\Part 2\\agriconnect\\obj\\Debug\\net9.0\\compressed\\ff1ccpevau-68xsugoiyp.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:37:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0by+vTMYMf4VXdhmTyXKy7TIqPt4o2diFo98S8QBXRY="
         }
       ]
     },

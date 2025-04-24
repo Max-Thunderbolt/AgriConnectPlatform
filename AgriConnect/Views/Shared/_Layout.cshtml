@@ -34,6 +34,11 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Market" asp-action="Index">Market</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#" id="loginBtn">Login</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -57,7 +62,12 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/modal.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>
+
+@* Include the modals *@
+@await Html.PartialAsync("_LoginModal")
+@await Html.PartialAsync("_RegisterModal")
