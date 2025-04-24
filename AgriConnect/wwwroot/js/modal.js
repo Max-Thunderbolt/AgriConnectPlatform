@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginFromRegisterBtn = document.getElementById('loginBtnFromRegister');
     const registerFromLoginBtn = document.getElementById('registerBtnFromLogin');
 
+    // Check authentication state on page load
+    checkAuthState();
+
     // Open login modal when login button is clicked
     if (loginBtn) {
         loginBtn.addEventListener('click', function () {
@@ -70,6 +73,52 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Check authentication state
+    async function checkAuthState() {
+        try {
+            const response = await fetch('/auth/check');
+            const data = await response.json();
+            
+            if (data.isAuthenticated) {
+                updateUIForAuthenticatedUser(data.user);
+            } else {
+                updateUIForUnauthenticatedUser();
+            }
+        } catch (error) {
+            console.error('Error checking auth state:', error);
+            updateUIForUnauthenticatedUser();
+        }
+    }
+
+    // Update UI for authenticated user
+    function updateUIForAuthenticatedUser(user) {
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const userEmailSpan = document.getElementById('userEmail');
+
+        if (loginBtn) loginBtn.style.display = 'none';
+        if (registerBtn) registerBtn.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'block';
+        if (userEmailSpan) {
+            userEmailSpan.textContent = user.email;
+            userEmailSpan.style.display = 'block';
+        }
+    }
+
+    // Update UI for unauthenticated user
+    function updateUIForUnauthenticatedUser() {
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const userEmailSpan = document.getElementById('userEmail');
+
+        if (loginBtn) loginBtn.style.display = 'block';
+        if (registerBtn) registerBtn.style.display = 'block';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+        if (userEmailSpan) userEmailSpan.style.display = 'none';
+    }
+
     // Login user
     async function loginUser(email, password) {
         try {
@@ -82,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             if (response.ok) {
+                const data = await response.json();
+                await checkAuthState(); // Update UI after successful login
                 return response;
             } else {
                 throw new Error('Login failed');
@@ -108,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             if (response.ok) {
+                const data = await response.json();
+                await checkAuthState(); // Update UI after successful registration
                 return response;
             } else {
                 throw new Error('Registration failed');
@@ -135,9 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Now send user data to Supabase auth service
             const response = await loginUser(email, password);
             if (response && response.ok) {
-                // Login successful, close modal and redirect
+                // Login successful, close modal
                 loginModal.style.display = 'none';
-                window.location.href = '/';
             } else {
                 // Login failed, show error message
                 const errorMessage = document.getElementById('loginErrorMessage');
@@ -183,9 +235,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Send registration data to server
             const response = await registerUser(sanitizedEmail, sanitizedPassword);
             if (response && response.ok) {
-                // Registration successful, close modal and redirect
+                // Registration successful, close modal
                 registerModal.style.display = 'none';
-                window.location.href = '/';
             } else {
                 // Registration failed, show error message
                 const errorMessage = document.getElementById('registerErrorMessage');
@@ -193,6 +244,30 @@ document.addEventListener('DOMContentLoaded', function () {
                     errorMessage.textContent = 'Registration failed. Please try again.';
                     errorMessage.style.display = 'block';
                 }
+            }
+        });
+    }
+
+    // Handle logout
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async function (event) {
+            event.preventDefault();
+            try {
+                const response = await fetch('/auth/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    await checkAuthState(); // Update UI after logout
+                } else {
+                    console.error('Logout failed');
+                }
+            } catch (error) {
+                console.error('Logout error:', error);
             }
         });
     }

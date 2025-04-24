@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using AgriConnect.Models;
+using AgriConnect.Utils;
 using System.Text.Json;
 
 namespace AgriConnect.Controllers
@@ -18,6 +20,32 @@ namespace AgriConnect.Controllers
         {
             _supabase = supabaseClient;
             _logger = logger;
+        }
+
+        [HttpGet]
+        [Route("auth/check")]
+        public async Task<IActionResult> CheckAuth()
+        {
+            try
+            {
+                var session = _supabase.Auth.CurrentSession;
+                if (session?.User != null)
+                {
+                    return Ok(new { 
+                        isAuthenticated = true,
+                        user = new {
+                            email = session.User.Email,
+                            id = session.User.Id
+                        }
+                    });
+                }
+                return Ok(new { isAuthenticated = false });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error checking authentication state");
+                return StatusCode(500, new { message = "Error checking authentication state" });
+            }
         }
 
         [HttpPost]
@@ -59,7 +87,7 @@ namespace AgriConnect.Controllers
             {
                 if (request == null || string.IsNullOrEmpty(request.email) || string.IsNullOrEmpty(request.password))
                 {
-                    _logger.LogWarning("Invalid registration request: {Request}", JsonSerializer.Serialize(request));
+                    _logger.LogWarning("Invalid login request: {Request}", JsonSerializer.Serialize(request));
                     return BadRequest("Email and password are required");
                 }
 
@@ -83,10 +111,19 @@ namespace AgriConnect.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> logout()
+        [Route("auth/logout")]
+        public async Task<IActionResult> Logout()
         {
-            await _supabase.Auth.SignOut();
-            return RedirectToAction("Index", "Home");
+            try
+            {
+                await _supabase.Auth.SignOut();
+                return Ok(new { message = "Logged out successfully" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during logout");
+                return StatusCode(500, new { message = "Error during logout" });
+            }
         }
     }
 }
