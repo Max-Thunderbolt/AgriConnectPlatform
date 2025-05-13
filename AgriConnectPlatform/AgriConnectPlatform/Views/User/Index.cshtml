@@ -1,0 +1,247 @@
+@model List<AgriConnectPlatform.Models.UserRole>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<body>
+    @Html.AntiForgeryToken()
+    <div class="container py-4">
+        <div class="dashboard-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1>Welcome, @User.Identity.Name</h1>
+                    <p class="text-secondary">Employee Dashboard</p>
+                </div>
+                <button class="btn btn-primary register-farmer-btn" onclick="showRegisterFarmerPopup()">
+                    ➕ Farmer
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div id="mainContent">
+            <!-- Farmers List View -->
+            <div id="farmersListView">
+                <div class="row mb-4">
+                    <div class="col">
+                        <input type="text" class="form-control search-box" id="userSearch"
+                            placeholder="Search farmers...">
+                    </div>
+                </div>
+
+                <div class="row">
+                    @foreach (var user in Model)
+                    {
+                        @if (!user.isEmployee)
+                        {
+                            <div class="col-md-6 col-lg-4">
+                                <div class="user-card">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="mb-0">@user.Email</h5>
+                                        <span class="role-badge">Farmer</span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="action-btn text-decoration-none"
+                                            onclick="loadFarmerProducts('@user.UserId', '@user.Email')">
+                                            View Products
+                                        </a>
+                                        <a href="#" class="btn btn-danger"
+                                            onclick="showDeleteFarmerPopup('@user.UserId', '@user.Email')">
+                                            Delete Farmer
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+
+            <!-- Farmer Products View -->
+            <div id="farmerProductsView" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 id="selectedFarmerName"></h2>
+                        <p class="text-secondary">Products Overview</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showFarmersList()">
+                        ← Back to Farmers
+                    </button>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col">
+                        <input type="text" class="form-control search-box" id="productSearch"
+                            placeholder="Search products...">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="user-card text-center">
+                            <h4 id="productCount">0</h4>
+                            <p class="text-secondary">Products Listed</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="user-card text-center bg-dark border-0">
+                            <label for="categoryFilter" class="form-label text-light">Filter by Category</label>
+                            <select id="categoryFilter"
+                                class="form-select text-light bg-dark border-0 custom-dark-select">
+                                <option value="all">All Categories</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Fruits">Fruits</option>
+                                <option value="Grains">Grains</option>
+                                <option value="Livestock">Livestock</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Poultry">Poultry</option>
+                                <option value="Seafood">Seafood</option>
+                                <option value="Herbs">Herbs</option>
+                                <option value="Flowers">Flowers</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label for="dateFilter" class="form-label text-light mt-3">Filter by Date</label>
+                            <input type="date" id="dateFilter"
+                                class="form-control text-light bg-dark border-0 custom-dark-select" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="productsContainer">
+                    <!-- Products will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <script src="~/js/popups.js"></script>
+    <script>
+        // Search functionality for farmers
+        document.getElementById('userSearch').addEventListener('input', function (e) {
+            const searchText = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('#farmersListView .user-card');
+
+            cards.forEach(card => {
+                const email = card.querySelector('h5').textContent.toLowerCase();
+                if (email.includes(searchText)) {
+                    card.parentElement.style.display = '';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        });
+
+        // Search functionality for products
+        document.getElementById('productSearch').addEventListener('input', function (e) {
+            const searchText = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('#productsContainer .user-card');
+
+            cards.forEach(card => {
+                const name = card.querySelector('h5') ? card.querySelector('h5').textContent.toLowerCase() : '';
+                const desc = card.querySelector('p.text-secondary') ? card.querySelector('p.text-secondary').textContent.toLowerCase() : '';
+                if (name.includes(searchText) || desc.includes(searchText)) {
+                    card.parentElement.style.display = '';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        });
+
+        function loadFarmerProducts(userId, farmerName) {
+            // Show loading state
+            document.getElementById('productsContainer').innerHTML = '<div class="col-12 text-center"><p>Loading products...</p></div>';
+
+            // Update farmer name
+            document.getElementById('selectedFarmerName').textContent = farmerName;
+
+            // Show products view, hide farmers list
+            document.getElementById('farmersListView').style.display = 'none';
+            document.getElementById('farmerProductsView').style.display = 'block';
+
+            // Fetch products
+            fetch(`/User/GetUserProducts?userId=${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const productsContainer = document.getElementById('productsContainer');
+                    productsContainer.innerHTML = '';
+
+                    // Update product count
+                    document.getElementById('productCount').textContent = data.length;
+
+                    // Render products
+                    data.forEach(product => {
+                        // Convert enum number to category name
+                        let categoryName = '';
+                        switch (product.category) {
+                            case 0: categoryName = 'Vegetables'; break;
+                            case 1: categoryName = 'Fruits'; break;
+                            case 2: categoryName = 'Grains'; break;
+                            case 3: categoryName = 'Livestock'; break;
+                            case 4: categoryName = 'Dairy'; break;
+                            case 5: categoryName = 'Poultry'; break;
+                            case 6: categoryName = 'Seafood'; break;
+                            case 7: categoryName = 'Herbs'; break;
+                            case 8: categoryName = 'Flowers'; break;
+                            case 9: categoryName = 'Other'; break;
+                            default: categoryName = 'Unknown';
+                        }
+                        const productCard = `
+                            <div class="col-md-6 col-lg-4">
+                                <div class="user-card" data-category="${categoryName}" data-date="${product.dateCreated ? product.dateCreated.split('T')[0] : ''}">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="mb-0">${product.productName}</h5>
+                                        <span class="badge bg-primary">${categoryName}</span>
+                                    </div>
+                                    <p class="text-secondary">${product.description}</p>
+                                    <h5> Created on: </h4>
+                                    <p class="text-secondary">${product.dateCreated ? product.dateCreated.split('T')[0] : ''}</p>
+                                </div>
+                            </div>
+                        `;
+                        productsContainer.innerHTML += productCard;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading products:', error);
+                    document.getElementById('productsContainer').innerHTML =
+                        '<div class="col-12 text-center"><p class="text-danger">Error loading products. Please try again.</p></div>';
+                });
+        }
+
+        function showFarmersList() {
+            document.getElementById('farmerProductsView').style.display = 'none';
+            document.getElementById('farmersListView').style.display = 'block';
+        }
+
+        // Filter products by category and date
+        function filterProducts() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            const selectedDate = document.getElementById('dateFilter').value;
+            const cards = document.querySelectorAll('#productsContainer .user-card');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                const cardDate = card.getAttribute('data-date');
+                const categoryMatch = (selectedCategory === 'all' || cardCategory === selectedCategory);
+                const dateMatch = (!selectedDate || cardDate === selectedDate);
+                if (categoryMatch && dateMatch) {
+                    card.parentElement.style.display = '';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        }
+        document.getElementById('categoryFilter').addEventListener('change', filterProducts);
+        document.getElementById('dateFilter').addEventListener('change', filterProducts);
+    </script>
+</body>
+
+</html>

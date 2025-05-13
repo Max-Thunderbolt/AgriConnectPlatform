@@ -1,0 +1,374 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+:root {
+  --dark-bg: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-color: #4CAF50;
+  --logout-button-color: #ee0f3f;
+
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-header {
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.user-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s;
+  border: 1px solid #333;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.role-badge {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.action-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+.search-box {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.search-box::placeholder {
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.register-farmer-btn {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.register-farmer-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid #333;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.modal-footer {
+    border-top: 1px solid #333;
+}
+
+.modal .form-control {
+    background-color: var(--dark-bg);
+    border: 1px solid #333;
+    color: var(--text-primary);
+}
+
+.modal .form-control:focus {
+    background-color: var(--dark-bg);
+    border-color: var(--accent-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.modal .form-label {
+    color: var(--text-primary);
+}
+
+.modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.modal .btn-secondary {
+    background-color: #666;
+    border: none;
+}
+
+.modal .btn-secondary:hover {
+    background-color: #777;
+}
+
+.logout-btn {
+    background-color: var(--logout-button-color);
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.logout-btn:hover {
+    color: var(--text-primary);
+    border-radius: 5px;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.register-farmer-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.register-farmer-input {
+    background-color: var(--dark-bg);
+    border: 1px solid #333;
+    color: var(--text-primary);
+}
+
+.register-farmer-input:focus {
+    background-color: var(--dark-bg);
+      border-color: var(--accent-color);
+      color: var(--text-primary);
+      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  }
+
+  .input-group-text {
+    background-color: var(--dark-bg);
+    border: 1px solid #333;
+    color: var(--text-primary);
+  }
+
+  .input-group-text:focus {
+    background-color: var(--dark-bg);
+    border-color: var(--accent-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  }
+
+  .btn-primary {
+    background-color: var(--accent-color);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+/* SweetAlert2 Dark Theme Customization */
+.swal2-popup-dark {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.swal2-popup-dark .swal2-title {
+    color: var(--text-primary) !important;
+}
+
+.swal2-popup-dark .swal2-content {
+    color: var(--text-secondary) !important;
+}
+
+.swal2-popup-dark .swal2-input,
+.swal2-popup-dark .swal2-textarea {
+    background-color: var(--dark-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: #333 !important;
+}
+
+.swal2-popup-dark .swal2-input:focus,
+.swal2-popup-dark .swal2-textarea:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25) !important;
+}
+
+.swal2-popup-dark .swal2-confirm {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+}
+
+.swal2-popup-dark .swal2-confirm:hover {
+    background-color: #45a049 !important;
+}
+
+.swal2-popup-dark .swal2-cancel {
+    background-color: #666 !important;
+    border: none !important;
+}
+
+.swal2-popup-dark .swal2-cancel:hover {
+    background-color: #777 !important;
+}
+
+.swal2-popup-dark .swal2-close {
+    color: var(--text-primary) !important;
+}
+
+.swal2-popup-dark .input-group-text {
+    background-color: var(--dark-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-primary) !important;
+}
+
+.swal2-popup-dark .btn-outline-secondary {
+    border-color: #333 !important;
+    color: var(--text-primary) !important;
+}
+
+.swal2-popup-dark .btn-outline-secondary:hover {
+    background-color: #333 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Modern input styles for SweetAlert2 popups */
+.swal2-popup-dark .form-control {
+    background: rgba(40, 40, 40, 0.95) !important;
+    color: var(--text-primary) !important;
+    border: 1.5px solid #444 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 1rem;
+}
+.swal2-popup-dark .form-control:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    background: rgba(50, 50, 50, 1) !important;
+}
+
+.swal2-popup-dark .input-group {
+    align-items: center;
+}
+
+.swal2-popup-dark .show-password-btn {
+    background: rgba(60,60,60,0.85);
+    border: none;
+    border-radius: 6px;
+    margin-left: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    color: var(--accent-color);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.swal2-popup-dark .show-password-btn:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.swal2-popup-dark .form-label {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.swal2-popup-dark .form-control::placeholder {
+    color: var(--text-primary);
+    opacity: 0.7;
+}
+
+.swal2-popup-dark ::placeholder,
+.swal2-popup-dark .form-control::placeholder,
+.swal2-popup-dark textarea::placeholder {
+    color: var(--text-primary) !important;
+    opacity: 0.7 !important;
+}
+
+.custom-dark-select,
+.form-select.text-light.bg-dark {
+    background-color: #2d2d2d !important;
+    color: #fff !important;
+    border: 1.5px solid #444 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-dark-select:focus,
+.form-select.text-light.bg-dark:focus {
+    border-color: #4CAF50 !important;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    background: #222 !important;
+    color: #fff !important;
+}
+  
+  
