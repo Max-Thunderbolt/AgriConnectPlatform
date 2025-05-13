@@ -22,7 +22,7 @@ AgriConnect Platform is a web-based application designed to connect farmers with
 
 ### 1. Clone the Repository
 ```bash
-git clone [repository-url]
+git clone https://github.com/Max-Thunderbolt/AgriConnectPlatform.git
 cd AgriConnectPlatform
 ```
 
@@ -68,20 +68,16 @@ dotnet run
 
 2. **Farmer Features**
    - Product listing and management
-   - Farm profile management
    - Product categorization
-   - Sustainable farming practices documentation
 
 3. **Employee Features**
-   - User management
-   - Content moderation
-   - System administration
-   - Analytics and reporting
+   - Create farmer profiles
+   - Manage farmer profiles
+   - View farmer products
 
 4. **Product Management**
    - Product categorization
    - Product details and descriptions
-   - Sustainable product verification
    - Product search and filtering
 
 ## User Roles and Permissions
@@ -142,9 +138,3 @@ For additional support:
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
-
-## License
-[Your License Information]
-
-## Contact
-[Your Contact Information] 
