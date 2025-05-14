@@ -277,16 +277,16 @@ function showAddProductPopup() {
         <div class="form-group mb-3">
             <label for="productCategory" class="form-label text-light">Product Category</label>
             <select id="productCategory" class="form-control">
-                <option value="Vegetables">Vegetables</option>
-                <option value="Fruits">Fruits</option>
-                <option value="Grains">Grains</option>
-                <option value="Livestock">Livestock</option>
-                <option value="Dairy">Dairy</option>
-                <option value="Poultry">Poultry</option>
-                <option value="Seafood">Seafood</option>
-                <option value="Herbs">Herbs</option>
-                <option value="Flowers">Flowers</option>
-                <option value="Other">Other</option>
+                <option value="0">Vegetables</option>
+                <option value="1">Fruits</option>
+                <option value="2">Grains</option>
+                <option value="3">Livestock</option>
+                <option value="4">Dairy</option>
+                <option value="5">Poultry</option>
+                <option value="6">Seafood</option>
+                <option value="7">Herbs</option>
+                <option value="8">Flowers</option>
+                <option value="9">Other</option>
             </select>
         </div>
         `,
@@ -316,10 +316,9 @@ function showAddProductPopup() {
                 showLoadingPopup('Adding product...');
                 const requestData = {
                     productName: productName,
-                    productDescription: productDescription,
-                    createdByUserId: userId,
-                    category: category,
-                    dateCreated: new Date().toISOString()
+                    Description: productDescription,
+                    Category: parseInt(category),
+                    DateCreated: new Date().toISOString()
                 };
 
                 console.log("Request data:", JSON.stringify(requestData));
@@ -338,7 +337,9 @@ function showAddProductPopup() {
                     credentials: 'same-origin',
                     body: JSON.stringify({
                         productName: productName,
-                        description: productDescription
+                        Description: productDescription,
+                        Category: parseInt(category),
+                        DateCreated: new Date().toISOString()
                     })
                 })
                     .then(response => response.json())
@@ -381,8 +382,28 @@ async function showEditProductPopup(productId) {
             'X-Requested-With': 'XMLHttpRequest'
         }
     }).then(response => response.json());
+    var productCategory = await fetch(`/Product/GetProductCategory?id=${productId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    }).then(response => response.json());
+    var productDateCreated = await fetch(`/Product/GetProductDateCreated?id=${productId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    }).then(response => response.json());
+
+    // Format the date for the input
+    const formattedDate = productDateCreated ? new Date(productDateCreated).toISOString().split('T')[0] : '';
+
     console.log(productName);
     console.log(productDescription);
+    console.log(productCategory);
+    console.log(productDateCreated);
     Swal.fire({
         title: 'Edit Product',
         html: `
@@ -397,17 +418,21 @@ async function showEditProductPopup(productId) {
         <div class="form-group mb-3">
             <label for="productCategory" class="form-label text-light">Product Category</label>
             <select id="productCategory" class="form-control">
-                <option value="Vegetables">Vegetables</option>
-                <option value="Fruits">Fruits</option>
-                <option value="Grains">Grains</option>
-                <option value="Livestock">Livestock</option>
-                <option value="Dairy">Dairy</option>
-                <option value="Poultry">Poultry</option>
-                <option value="Seafood">Seafood</option>
-                <option value="Herbs">Herbs</option>
-                <option value="Flowers">Flowers</option>
-                <option value="Other">Other</option>
+                <option value="0">Vegetables</option>
+                <option value="1">Fruits</option>
+                <option value="2">Grains</option>
+                <option value="3">Livestock</option>
+                <option value="4">Dairy</option>
+                <option value="5">Poultry</option>
+                <option value="6">Seafood</option>
+                <option value="7">Herbs</option>
+                <option value="8">Flowers</option>
+                <option value="9">Other</option>
             </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="dateCreated" class="form-label text-light">Date Created</label>
+            <input type="date" id="dateCreated" class="form-control" value="${formattedDate}">
         </div>
         `,
         confirmButtonText: 'Edit Product',
@@ -430,13 +455,18 @@ async function showEditProductPopup(productId) {
         if (result.isConfirmed) {
             const productName = document.getElementById('productName').value;
             const productDescription = document.getElementById('productDescription').value;
+            const categorySelect = document.getElementById('productCategory');
+            const productCategory = parseInt(categorySelect.value);
+            const productDateCreated = document.getElementById('dateCreated').value;
             if (productName && productDescription) {
                 showLoadingPopup('Editing product...');
                 const requestData = {
+                    Id: parseInt(productId),
                     productName: productName,
-                    productDescription: productDescription,
-                    category: category,
-                    createdByUserId: userId
+                    Description: productDescription,
+                    Category: productCategory,
+                    CreatedByUserId: userId,
+                    DateCreated: productDateCreated
                 };
 
                 console.log("Request data:", JSON.stringify(requestData));
@@ -445,13 +475,14 @@ async function showEditProductPopup(productId) {
 
                 console.log("Encrypted data:", encryptedData);
 
-                fetch('/Product/Edit', {
+                fetch('/Product/UpdateProduct', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'X-Requested-With': 'XMLHttpRequest',
                         'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
                     },
+                    body: JSON.stringify(requestData)
                 })
                     .then(response => response.json())
                     .then(data => {
@@ -596,5 +627,32 @@ function showDeleteFarmerPopup(userId, farmerName) {
                     showErrorPopup('An error occurred while deleting the farmer');
                 });
         }
+    });
+}
+
+// Function to load farmer details
+function loadFarmerDetails(userId, cardElement) {
+    fetch(`/Farmer/GetFarmerDetails?userId=${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Update the farm name and location in the specific card
+            const paragraphs = cardElement.querySelectorAll('p.text-secondary');
+            if (paragraphs.length >= 2) {
+                paragraphs[0].textContent = data.farmName || 'Not specified';
+                paragraphs[1].textContent = data.location || 'Not specified';
+            }
+        } else {
+            console.error('Error loading farmer details:', data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching farmer details:', error);
     });
 }

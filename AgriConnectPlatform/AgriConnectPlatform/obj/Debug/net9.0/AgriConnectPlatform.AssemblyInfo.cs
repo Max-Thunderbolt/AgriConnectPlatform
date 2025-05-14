@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgriConnectPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b616d6fe1c916bb4e5089be6dfec87fd7154c99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffaec5bf7aa681a75f01309f90c22dff084fd424")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgriConnectPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgriConnectPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,7 @@ using AgriConnectPlatform.Models;
 using AgriConnectPlatform.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace AgriConnectPlatform.Controllers
 {
@@ -46,8 +47,10 @@ namespace AgriConnectPlatform.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([FromBody] Product product)
         {
+            Console.WriteLine("Creating product " + product.productName);
             if (ModelState.IsValid)
             {
+                Console.WriteLine("Model state is valid");
                 try
                 {
                     product.CreatedByUserId = _userManager.GetUserId(User);
@@ -60,21 +63,7 @@ namespace AgriConnectPlatform.Controllers
                     return Json(new { success = false, message = "Error adding product: " + ex.Message });
                 }
             }
-            return Json(new { success = false, message = "Invalid product data" });
-        }
-
-        public async Task<IActionResult> Edit(int id)
-        {
-            if(id == null)
-            {
-                return NotFound();
-            }
-            var product = await _context.Products.FindAsync(id);
-            if(product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
+            return Json(new { success = false, message = "Invalid product data." });
         }
 
         [HttpGet]
@@ -91,31 +80,56 @@ namespace AgriConnectPlatform.Controllers
             return Json(product?.Description);
         }
 
-        
-        private bool productExists (int id)
+        [HttpGet]
+        public async Task<IActionResult> GetProductCategory(int id)
         {
-            if (id == null)
-            {
-                return false;
-            }
+            var product = await _context.Products.FindAsync(id);
+            return Json((int?)product?.Category);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductDateCreated(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            return Json(product?.DateCreated);
+        }
+
+        private bool productExists(int id)
+        {
             return _context.Products.Any(e => e.Id == id);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,productName,Description")] Product product)
+        [Route("Product/UpdateProduct")]
+        public async Task<IActionResult> UpdateProduct([FromBody] Product product)
         {
-            if(id != product.Id)
+            if (product == null)
             {
-                return NotFound();
+                Console.WriteLine("Product is null");
+                return Json(new { success = false, message = "Invalid product data" });
             }
-            if(ModelState.IsValid)
+
+            Console.WriteLine($"Received product - ID: {product.Id}, Name: {product.productName}, Description: {product.Description}");
+
+            if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(product);
+                    var existingProduct = await _context.Products.FindAsync(product.Id);
+                    if (existingProduct == null)
+                    {
+                        return Json(new { success = false, message = "Product not found" });
+                    }
+
+                    existingProduct.productName = product.productName;
+                    existingProduct.Description = product.Description;
+                    existingProduct.Category = product.Category;
+                    existingProduct.DateCreated = product.DateCreated;
+
+                    _context.Update(existingProduct);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return Json(new { success = true, message = "Product updated successfully" });
                 }
                 catch(DbUpdateConcurrencyException)
                 {
@@ -129,7 +143,9 @@ namespace AgriConnectPlatform.Controllers
                     }
                 }
             }
-            return View(product);
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+            Console.WriteLine("Validation errors: " + string.Join(", ", errors));
+            return Json(new { success = false, message = "Invalid product data: " + string.Join(", ", errors) });
         }
 
         [HttpPost]

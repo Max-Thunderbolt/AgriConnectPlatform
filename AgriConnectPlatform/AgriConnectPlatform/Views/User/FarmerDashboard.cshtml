@@ -47,12 +47,14 @@
                     <div class="user-card">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="mb-0">@product.productName</h5>
+                            <span class="badge bg-primary">@product.Category</span>
                         </div>
                         <p class="text-secondary">@product.Description</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="#" class="action-btn text-decoration-none" onclick="showEditProductPopup(@product.Id)">Edit</a>
                             <a href="#" class="logout-btn text-decoration-none" onclick="showDeleteProductPopup(@product.Id)">Delete</a>
                         </div>
+                        <p class="text-secondary">Created on: @product.DateCreated?.ToString("dd MMMM yyyy")</p>
                     </div>
                 </div>
             }

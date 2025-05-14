@@ -72,17 +72,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"utlf1f4ald"},{"Name":"integrity","Value":"sha256-vuYnjvO0qZzXRT\u002BnYGNZ6d\u002BV9yf8e1K02EkvsnLkiyk="},{"Name":"label","Value":"_content/AgriConnectPlatform/js/encryption.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1524"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022vuYnjvO0qZzXRT\u002BnYGNZ6d\u002BV9yf8e1K02EkvsnLkiyk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 13:15:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AgriConnectPlatform/js/popups.h5rek7v5tl.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\popups.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"h5rek7v5tl"},{"Name":"integrity","Value":"sha256-Cz\u002Bfju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="},{"Name":"label","Value":"_content/AgriConnectPlatform/js/popups.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24264"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Cz\u002Bfju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 13:30:21 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriConnectPlatform/js/popups.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\popups.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Cz\u002Bfju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"24264"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Cz\u002Bfju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 13:30:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"26192"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 14:50:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AgriConnectPlatform/js/popups.xws7cjdfn3.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\popups.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xws7cjdfn3"},{"Name":"integrity","Value":"sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="},{"Name":"label","Value":"_content/AgriConnectPlatform/js/popups.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"26192"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 14:50:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AgriConnectPlatform/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

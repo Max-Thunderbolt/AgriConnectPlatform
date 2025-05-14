@@ -44,8 +44,9 @@
                                 <div class="user-card">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
                                         <h5 class="mb-0">@user.Email</h5>
-                                        <span class="role-badge">Farmer</span>
                                     </div>
+                                    <p class="text-secondary"></p> <!-- Farm Name -->
+                                    <p class="text-secondary"></p> <!-- Location -->
 
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="#" class="action-btn text-decoration-none"
@@ -241,6 +242,15 @@
         }
         document.getElementById('categoryFilter').addEventListener('change', filterProducts);
         document.getElementById('dateFilter').addEventListener('change', filterProducts);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load farmer details for each farmer card
+            const farmerCards = document.querySelectorAll('#farmersListView .user-card');
+            farmerCards.forEach(card => {
+                const userId = card.querySelector('.action-btn').getAttribute('onclick').match(/'([^']+)'/)[1];
+                loadFarmerDetails(userId, card);
+            });
+        });
     </script>
 </body>
 

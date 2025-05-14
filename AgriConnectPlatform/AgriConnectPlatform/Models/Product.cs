@@ -25,5 +25,6 @@ namespace AgriConnectPlatform.Models
         public ProductCategory? Category { get; set; }
         public DateTime? DateCreated { get; set; }
         public string? CreatedByUserId { get; set; }
+        
     }
 }

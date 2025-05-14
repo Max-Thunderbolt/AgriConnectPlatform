@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h5rek7v5tl</Fingerprint>
-      <Integrity>Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=</Integrity>
+      <Fingerprint>xws7cjdfn3</Fingerprint>
+      <Integrity>IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\popups.js'))</OriginalItemSpec>

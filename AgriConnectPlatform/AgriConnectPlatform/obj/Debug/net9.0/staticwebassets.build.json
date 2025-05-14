@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j51u/f84U9N0XFf+IfxTKdoHZH7bFvBLSyDlz9WzeqI=",
+  "Hash": "1NrS+ruMkt3xD5/gzbN5mWY9Dcl/AkkQn3b53IgKfHs=",
   "Source": "AgriConnectPlatform",
   "BasePath": "_content/AgriConnectPlatform",
   "Mode": "Default",
@@ -1046,12 +1046,12 @@
       "OriginalItemSpec": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-h5rek7v5tl.gz",
+      "Identity": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-xws7cjdfn3.gz",
       "SourceId": "AgriConnectPlatform",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/AgriConnectPlatform",
-      "RelativePath": "js/popups#[.{fingerprint=h5rek7v5tl}]?.js.gz",
+      "RelativePath": "js/popups#[.{fingerprint=xws7cjdfn3}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1060,8 +1060,8 @@
       "RelatedAsset": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\js\\popups.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "e9epufv6md",
-      "Integrity": "jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4=",
+      "Fingerprint": "roqb5bobkf",
+      "Integrity": "28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\js\\popups.js"
@@ -1585,8 +1585,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h5rek7v5tl",
-      "Integrity": "Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=",
+      "Fingerprint": "xws7cjdfn3",
+      "Integrity": "IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\popups.js"
@@ -4745,13 +4745,13 @@
       ]
     },
     {
-      "Route": "js/popups.h5rek7v5tl.js",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-h5rek7v5tl.gz",
+      "Route": "js/popups.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-xws7cjdfn3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000315457413"
+          "Quality": "0.000291715286"
         }
       ],
       "ResponseHeaders": [
@@ -4761,19 +4761,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3169"
+          "Value": "3427"
         },
         {
           "Name": "ETag",
-          "Value": "\"jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4=\""
+          "Value": "\"28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -4789,26 +4789,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\""
+          "Value": "W/\"IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "h5rek7v5tl"
-        },
-        {
-          "Name": "label",
-          "Value": "js/popups.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="
+          "Value": "sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="
         }
       ]
     },
     {
-      "Route": "js/popups.h5rek7v5tl.js",
+      "Route": "js/popups.js",
       "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\js\\popups.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4818,7 +4810,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24264"
+          "Value": "26192"
         },
         {
           "Name": "Content-Type",
@@ -4826,11 +4818,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\""
+          "Value": "\"IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="
+        }
+      ]
+    },
+    {
+      "Route": "js/popups.js.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-xws7cjdfn3.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3427"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/popups.xws7cjdfn3.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-xws7cjdfn3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000291715286"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3427"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xws7cjdfn3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/popups.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="
+        }
+      ]
+    },
+    {
+      "Route": "js/popups.xws7cjdfn3.js",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\js\\popups.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26192"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4840,7 +4977,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h5rek7v5tl"
+          "Value": "xws7cjdfn3"
         },
         {
           "Name": "label",
@@ -4848,13 +4985,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="
+          "Value": "sha256-IdafHta3YcsZCLCqjsAFECUYmu38QuQpiPM2jDd6MfE="
         }
       ]
     },
     {
-      "Route": "js/popups.h5rek7v5tl.js.gz",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-h5rek7v5tl.gz",
+      "Route": "js/popups.xws7cjdfn3.js.gz",
+      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-xws7cjdfn3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4863,7 +5000,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3169"
+          "Value": "3427"
         },
         {
           "Name": "Content-Type",
@@ -4871,11 +5008,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4=\""
+          "Value": "\"28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
+          "Value": "Wed, 14 May 2025 14:50:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4893,7 +5030,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h5rek7v5tl"
+          "Value": "xws7cjdfn3"
         },
         {
           "Name": "label",
@@ -4901,144 +5038,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4="
-        }
-      ]
-    },
-    {
-      "Route": "js/popups.js",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-h5rek7v5tl.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000315457413"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3169"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="
-        }
-      ]
-    },
-    {
-      "Route": "js/popups.js",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\wwwroot\\js\\popups.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Cz+fju1Z9KKMWS6nJb0FSCd1aipoHG44js1E6e/81Q0="
-        }
-      ]
-    },
-    {
-      "Route": "js/popups.js.gz",
-      "AssetFile": "C:\\Users\\maxat\\OneDrive - ADvTECH Ltd\\Varsity College\\2025\\Semester 1\\PROG7311\\POE\\AgriConnectPlatform\\agriconnectplatform\\agriconnectplatform\\obj\\Debug\\net9.0\\compressed\\rzk6d0e7bb-h5rek7v5tl.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3169"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 13:30:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jgG7GMGfKimDXOoTFSBD8wnKr9zhLYlds1Rob5uJ2/4="
+          "Value": "sha256-28yTA6HGDGFClFQz+iE13BGoi4m5JiyrsatN8ZvuUHQ="
         }
       ]
     },

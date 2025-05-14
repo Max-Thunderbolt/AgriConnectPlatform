@@ -23,6 +23,36 @@ namespace AgriConnectPlatform.Controllers
             return View(farmers);
         }   
 
+        [HttpGet]
+        [Route("Farmer/GetFarmerDetails")]
+        public async Task<IActionResult> GetFarmerDetails(string userId)
+        {
+            try
+            {
+                Console.WriteLine($"Getting farmer details for userId: {userId}");
+                var farmer = await _context.Farmers
+                    .FirstOrDefaultAsync(f => f.FarmerId == userId);
+                
+                Console.WriteLine($"Farmer found: {farmer != null}");
+                if (farmer == null)
+                {
+                    return Json(new { success = false, message = "Farmer not found" });
+                }
+
+                Console.WriteLine($"Farm Name: {farmer.FarmName}, Location: {farmer.Location}");
+                return Json(new { 
+                    success = true, 
+                    farmName = farmer.FarmName,
+                    location = farmer.Location
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetFarmerDetails: {ex.Message}");
+                return Json(new { success = false, message = "Error getting farmer details: " + ex.Message });
+            }
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("Farmer/Create")]
