@@ -13,8 +13,8 @@ namespace AgriConnectPlatform
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("AgriConnectConn") ?? 
-                throw new InvalidOperationException("Connection string 'AgriConnectConn' not found.");
+            var connectionString = builder.Configuration.GetConnectionString("AgriConnectConn2") ?? 
+                throw new InvalidOperationException("Connection string 'AgriConnectConn2' not found.");
             
             builder.Services.AddDbContext<AgriConnectContext>(options =>
                 options.UseSqlServer(connectionString));
