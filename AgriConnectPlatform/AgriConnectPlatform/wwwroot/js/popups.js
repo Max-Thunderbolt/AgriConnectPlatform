@@ -308,8 +308,10 @@ function showAddProductPopup() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
+            console.log("Adding product");
             const productName = document.getElementById('productName').value;
             const productDescription = document.getElementById('productDescription').value;
+            const category = document.getElementById('productCategory').value;
             if (productName && productDescription) {
                 showLoadingPopup('Adding product...');
                 const requestData = {
@@ -596,27 +598,3 @@ function showDeleteFarmerPopup(userId, farmerName) {
         }
     });
 }
-
-// Test function for POST requests
-function testPost() {
-    fetch('/Product/Test', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        credentials: 'same-origin'
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Test POST response:', data);
-        })
-        .catch(error => {
-            console.error('Test POST error:', error);
-        });
-}
-
-// Call this function when the page loads
-document.addEventListener('DOMContentLoaded', function () {
-    testPost();
-});
