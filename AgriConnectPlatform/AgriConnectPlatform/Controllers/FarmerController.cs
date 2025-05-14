@@ -23,19 +23,36 @@ namespace AgriConnectPlatform.Controllers
             return View(farmers);
         }   
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Farmer/Create")]
         public async Task<IActionResult> Create(string userId)
         {
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
+            try 
             {
+                Console.WriteLine($"Create method called with userId: {userId}");
+                var user = await _userManager.FindByIdAsync(userId);
+                Console.WriteLine($"User found: {user != null}");
+                if (user == null)
+                {
                 return NotFound($"User with ID {userId} not found.");
             }
 
             var farmer = new Farmer { FarmerId = user.Id };
+            Console.WriteLine($"Farmer created: {farmer != null}");
+            Console.WriteLine($"Farmer ID: {farmer.FarmerId}");
+            Console.WriteLine($"Farmer: {farmer}");
             _context.Farmers.Add(farmer);
             await _context.SaveChangesAsync();
+            Console.WriteLine($"Farmer saved: {farmer.FarmerId}");
 
-            return RedirectToAction(nameof(Index)); 
+                return Json(new { success = true, userId = userId });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in Create: {ex.Message}");
+                return Json(new { success = false, message = "Error creating farmer: " + ex.Message });
+            }
         }
 
         [HttpPost]
@@ -45,10 +62,10 @@ namespace AgriConnectPlatform.Controllers
         {
             try
             {
-                System.Diagnostics.Debug.WriteLine($"DeleteFarmer called with userId: {userId}");
-                System.Diagnostics.Debug.WriteLine($"Current route: {Request.Path}");
-                System.Diagnostics.Debug.WriteLine($"HTTP Method: {Request.Method}");
-                System.Diagnostics.Debug.WriteLine($"Content Type: {Request.ContentType}");
+                Console.WriteLine($"DeleteFarmer called with userId: {userId}");
+                Console.WriteLine($"Current route: {Request.Path}");
+                Console.WriteLine($"HTTP Method: {Request.Method}"); 
+                Console.WriteLine($"Content Type: {Request.ContentType}");
 
                 if (string.IsNullOrEmpty(userId))
                 {
@@ -61,10 +78,10 @@ namespace AgriConnectPlatform.Controllers
                 {
                     return Json(new { success = false, message = "User not found" });
                 }
-
+                Console.WriteLine($"User found: {user != null}");
                 // Then find the farmer record
                 var farmer = await _context.Farmers.FirstOrDefaultAsync(f => f.FarmerId == userId);
-                System.Diagnostics.Debug.WriteLine($"Found farmer: {farmer != null}");
+                Console.WriteLine($"Found farmer: {farmer != null}");
                 
                 if (farmer == null)
                 {
@@ -81,8 +98,8 @@ namespace AgriConnectPlatform.Controllers
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error in DeleteFarmer: {ex.Message}");
-                System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                Console.WriteLine($"Error in DeleteFarmer: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return Json(new { success = false, message = "Error deleting farmer: " + ex.Message });
             }
         }

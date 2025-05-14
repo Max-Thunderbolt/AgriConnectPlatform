@@ -240,3 +240,5 @@ C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\P
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\AgriConnectPlatform\agriconnectplatform\obj\Debug\net9.0\compressed\dcon0pjc11-61n19gt1b8.gz
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\AgriConnectPlatform\agriconnectplatform\obj\Debug\net9.0\compressed\5xcgo3adb3-0yx4cfmmty.gz
 C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\AgriConnectPlatform\agriconnectplatform\obj\Debug\net9.0\compressed\rzk6d0e7bb-qsvbmqbqx9.gz
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnectplatform\AgriConnectPlatform\bin\Debug\net9.0\System.Formats.Asn1.dll
+C:\Users\maxat\OneDrive - ADvTECH Ltd\Varsity College\2025\Semester 1\PROG7311\POE\Part 2\agriconnectplatform\AgriConnectPlatform\bin\Debug\net9.0\System.Text.Json.dll

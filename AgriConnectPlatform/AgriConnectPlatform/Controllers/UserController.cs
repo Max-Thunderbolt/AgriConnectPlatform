@@ -89,6 +89,8 @@ namespace AgriConnectPlatform.Controllers
         {
             public required string email { get; set; }
             public required string password { get; set; }
+            public required string location { get; set; }
+            public required string farmName { get; set; }       
         }
 
         private credentialRequest? DecryptData(string encryptedData)
@@ -212,23 +214,34 @@ namespace AgriConnectPlatform.Controllers
 
                 string email = decryptedData.email;
                 string password = decryptedData.password;
+                string location = decryptedData.location;
+                string farmName = decryptedData.farmName;
 
                 if (farmerExists(email))
                 {
                     return Json(new { success = false, message = "Farmer already exists" });
                 }
 
-                var farmer = new IdentityUser
+                var farmer_user = new IdentityUser
                 {
                     UserName = email,
                     Email = email,
                     EmailConfirmed = true
                 };
 
-                var result = await _userManager.CreateAsync(farmer, password);
-                if (result.Succeeded)
+                var farmer = new Farmer
                 {
-                    await _userManager.AddToRoleAsync(farmer, "Farmer");
+                    FarmerId = farmer_user.Id,
+                    Location = location,
+                    FarmName = farmName
+                };
+
+                var userCreatedResult = await _userManager.CreateAsync(farmer_user, password);
+                var farmerCreatedResult = await _context.Farmers.AddAsync(farmer);  
+                await _context.SaveChangesAsync();
+                if (userCreatedResult.Succeeded && farmerCreatedResult.Entity != null)
+                {
+                    await _userManager.AddToRoleAsync(farmer_user, "Farmer");
                     return Json(new { success = true, message = "Farmer registered successfully" });
                 }
                 return Json(new { success = false, message = "Failed to register farmer" });

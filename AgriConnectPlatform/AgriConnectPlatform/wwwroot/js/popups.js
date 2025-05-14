@@ -77,7 +77,9 @@ function showLoginPopup() {
                 showLoadingPopup('Logging in...');
                 const requestData = {
                     email: loginEmail,
-                    password: loginPassword
+                    password: loginPassword,
+                    location: null,
+                    farmName: null
                 };
 
                 console.log("Request data:", JSON.stringify(requestData));
@@ -210,11 +212,11 @@ function showRegisterFarmerPopup() {
                     location: farmerLocation,
                     farmName: farmerFarmName
                 };
-                
+
                 console.log("Request data:", JSON.stringify(requestData));
 
                 const encryptedData = encryptData(requestData);
-                
+
                 console.log("Encrypted data:", encryptedData);
                 fetch('/User/RegisterFarmer', {
                     method: 'POST',
@@ -227,36 +229,20 @@ function showRegisterFarmerPopup() {
                         encryptedData: encryptedData
                     })
                 })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // After successful user registration, create the farmer record
-                        return fetch(`/Farmer/Create?userId=${data.userId}`, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-Requested-With': 'XMLHttpRequest'
-                            },
-                            credentials: 'same-origin'
-                        }).then(response => response.json())
-                        .then(farmerData => {
-                            closeLoadingPopup();
-                            if (farmerData.success) {
-                                showSuccessPopup('Farmer registered successfully');
-                                window.location.reload();
-                            } else {
-                                showErrorPopup('User created but failed to create farmer record. Please contact support.');
-                            }
-                        });
-                    } else {
+                    .then(response => response.json())
+                    .then(data => {
                         closeLoadingPopup();
-                        showErrorPopup(data.message);
-                    }
-                })
-                .catch(error => {
-                    closeLoadingPopup();
-                    showErrorPopup('An error occurred while registering the farmer');
-                });
+                        if (data.success) {
+                            showSuccessPopup('Farmer registered successfully');
+                            window.location.reload();
+                        } else {
+                            showErrorPopup(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        closeLoadingPopup();
+                        showErrorPopup('An error occurred while registering the farmer');
+                    });
             }
             else {
                 showErrorPopup('Please fill in all required fields');
@@ -312,14 +298,14 @@ function showAddProductPopup() {
         background: '#2d2d2d',
         customClass: {
             popup: 'swal2-popup-dark',
-            title: 'text-light',    
+            title: 'text-light',
             content: 'text-light',
             confirmButton: 'btn btn-primary',
             cancelButton: 'btn btn-secondary'
         },
         didOpen: () => {
             document.getElementById('productName').focus();
-        } 
+        }
     }).then((result) => {
         if (result.isConfirmed) {
             const productName = document.getElementById('productName').value;
@@ -337,7 +323,7 @@ function showAddProductPopup() {
                 console.log("Request data:", JSON.stringify(requestData));
 
                 const encryptedData = encryptData(requestData);
-                
+
                 console.log("Encrypted data:", encryptedData);
 
                 fetch('/Product/Create', {
@@ -352,23 +338,23 @@ function showAddProductPopup() {
                         productName: productName,
                         description: productDescription
                     })
-                })  
-                .then(response => response.json())
-                .then(data => {
-                    closeLoadingPopup();
-                    if (data.success) {
-                        showSuccessPopup(data.message);
-                        // Refresh the page to show the new product
-                        window.location.reload();
-                    }
-                    else {
-                        showErrorPopup(data.message);
-                    }
                 })
-                .catch(error => {
-                    closeLoadingPopup();
-                    showErrorPopup('An error occurred while adding the product');
-                });     
+                    .then(response => response.json())
+                    .then(data => {
+                        closeLoadingPopup();
+                        if (data.success) {
+                            showSuccessPopup(data.message);
+                            // Refresh the page to show the new product
+                            window.location.reload();
+                        }
+                        else {
+                            showErrorPopup(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        closeLoadingPopup();
+                        showErrorPopup('An error occurred while adding the product');
+                    });
             }
             else {
                 showErrorPopup('Please enter a valid product name and description');
@@ -454,7 +440,7 @@ async function showEditProductPopup(productId) {
                 console.log("Request data:", JSON.stringify(requestData));
 
                 const encryptedData = encryptData(requestData);
-                
+
                 console.log("Encrypted data:", encryptedData);
 
                 fetch('/Product/Edit', {
@@ -465,22 +451,22 @@ async function showEditProductPopup(productId) {
                         'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
                     },
                 })
-                .then(response => response.json())
-                .then(data => {
-                    closeLoadingPopup();
-                    if (data.success) {
-                        showSuccessPopup(data.message);
-                        // Refresh the page to show the updated product
-                        window.location.reload();
-                    }
-                    else {
-                        showErrorPopup(data.message);
-                    }
-                })
-                .catch(error => {
-                    closeLoadingPopup();
-                    showErrorPopup('An error occurred while editing the product');
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        closeLoadingPopup();
+                        if (data.success) {
+                            showSuccessPopup(data.message);
+                            // Refresh the page to show the updated product
+                            window.location.reload();
+                        }
+                        else {
+                            showErrorPopup(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        closeLoadingPopup();
+                        showErrorPopup('An error occurred while editing the product');
+                    });
             }
             else {
                 showErrorPopup('Please enter a valid product name and description');
@@ -492,7 +478,7 @@ async function showEditProductPopup(productId) {
 // Delete product popup
 function showDeleteProductPopup(productId) {
     console.log('Attempting to delete product with ID:', productId);
-    
+
     Swal.fire({
         title: 'Delete Product',
         html: 'Are you sure you want to delete this product?',
@@ -513,14 +499,14 @@ function showDeleteProductPopup(productId) {
     }).then((result) => {
         if (result.isConfirmed) {
             showLoadingPopup('Deleting product...');
-            
+
             // Get the anti-forgery token
             const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
-            
+
             // Create URLSearchParams
             const params = new URLSearchParams();
             params.append('id', productId);
-            
+
             fetch('/Product/Delete', {
                 method: 'POST',
                 headers: {
@@ -531,21 +517,21 @@ function showDeleteProductPopup(productId) {
                 body: params.toString(),
                 credentials: 'same-origin'
             })
-            .then(response => response.json())
-            .then(data => {
-                closeLoadingPopup();
-                if (data.success) {
-                    showSuccessPopup(data.message);
-                    window.location.reload();
-                }
-                else {
-                    showErrorPopup(data.message);
-                }
-            })
-            .catch(error => {
-                closeLoadingPopup();
-                showErrorPopup('An error occurred while deleting the product');
-            });
+                .then(response => response.json())
+                .then(data => {
+                    closeLoadingPopup();
+                    if (data.success) {
+                        showSuccessPopup(data.message);
+                        window.location.reload();
+                    }
+                    else {
+                        showErrorPopup(data.message);
+                    }
+                })
+                .catch(error => {
+                    closeLoadingPopup();
+                    showErrorPopup('An error occurred while deleting the product');
+                });
         }
     });
 }
@@ -553,7 +539,7 @@ function showDeleteProductPopup(productId) {
 // Delete farmer popup
 function showDeleteFarmerPopup(userId, farmerName) {
     console.log('Attempting to delete farmer with ID:', userId);
-    
+
     Swal.fire({
         title: 'Delete Farmer',
         html: `Are you sure you want to delete ${farmerName}?`,
@@ -574,14 +560,14 @@ function showDeleteFarmerPopup(userId, farmerName) {
     }).then((result) => {
         if (result.isConfirmed) {
             showLoadingPopup('Deleting farmer...');
-            
+
             // Get the anti-forgery token
             const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
-            
+
             // Create URLSearchParams
             const params = new URLSearchParams();
             params.append('userId', userId);
-            
+
             fetch('/Farmer/DeleteFarmer', {
                 method: 'POST',
                 headers: {
@@ -592,21 +578,21 @@ function showDeleteFarmerPopup(userId, farmerName) {
                 body: params.toString(),
                 credentials: 'same-origin'
             })
-            .then(response => response.json())
-            .then(data => {
-                closeLoadingPopup();
-                if (data.success) {
-                    showSuccessPopup(data.message);
-                    window.location.reload();
-                }
-                else {
-                    showErrorPopup(data.message);
-                }
-            })
-            .catch(error => {
-                closeLoadingPopup();
-                showErrorPopup('An error occurred while deleting the farmer');
-            });
+                .then(response => response.json())
+                .then(data => {
+                    closeLoadingPopup();
+                    if (data.success) {
+                        showSuccessPopup(data.message);
+                        window.location.reload();
+                    }
+                    else {
+                        showErrorPopup(data.message);
+                    }
+                })
+                .catch(error => {
+                    closeLoadingPopup();
+                    showErrorPopup('An error occurred while deleting the farmer');
+                });
         }
     });
 }
@@ -621,16 +607,16 @@ function testPost() {
         },
         credentials: 'same-origin'
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Test POST response:', data);
-    })
-    .catch(error => {
-        console.error('Test POST error:', error);
-    });
+        .then(response => response.json())
+        .then(data => {
+            console.log('Test POST response:', data);
+        })
+        .catch(error => {
+            console.error('Test POST error:', error);
+        });
 }
 
 // Call this function when the page loads
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     testPost();
 });
